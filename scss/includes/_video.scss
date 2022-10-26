@@ -1,0 +1,57 @@
+.video {
+	position: relative;
+	margin-top: 50px;
+
+	@media (max-width: 991px) {
+		margin-top: 25px;
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+
+	&__link {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0,0,0,.3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__play {
+		min-width: 210px;
+		max-width: 210px;
+		height: 210px;
+		border-radius: 50%;
+		border: 2px solid $color_white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (max-width: 991px) {
+			min-width: 52px;
+			max-width: 52px;
+			height: 52px;
+		}
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-top: 30px solid transparent;
+			border-left: 40px solid $color_white;
+			border-bottom: 30px solid transparent;
+
+			@media (max-width: 991px) {
+				border-top: 8px solid transparent;
+				border-left: 12px solid $color_white;
+				border-bottom: 8px solid transparent;
+			}
+		}
+	}
+}

@@ -1,0 +1,181 @@
+.modal(id="modal-register")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-fancybox-close)
+            use(xlink:href="#svg-close" data-fancybox-close)
+
+    .modal__title Регистрация
+
+    form.form(action="#" method="post")
+        fieldset.form__fieldset
+            label.form__label(for="register-fullname") ФИО
+            input.form__input(id="register-fullname" type="text" name="fullname" placeholder="")
+
+        fieldset.form__fieldset
+            label.form__label(for="register-email") Email
+            input.form__input(id="register-email" type="email" name="email" placeholder="")
+
+        fieldset.form__fieldset
+            label.form__label(for="register-phone") Телефон
+            input.form__input(id="register-phone" type="tel" name="phone" placeholder="")
+
+        fieldset.form__fieldset
+            label.form__label(for="register-password") Пароль
+            input.form__input(id="register-password" type="password" name="password" placeholder="")
+            button.form__password(type="button")
+                svg(class="_active" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href="#svg-password-show")
+                svg(width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href="#svg-password-hide")
+
+        fieldset.form__fieldset
+            label.form__label(for="register-password-repeat") Повторите пароль
+            input.form__input(id="register-password-repeat" type="password" name="password_repeat" placeholder="")
+            button.form__password(type="button")
+                svg(class="_active" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href="#svg-password-show")
+                svg(width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href="#svg-password-hide")
+
+        fieldset.form__fieldset.form__checkbox
+            input(type="checkbox" id="register-policy" name="policy" checked)
+            label(for="register-policy")
+                span
+                    svg(width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-check")
+                | Принимаю условия на обработку персональных данных
+
+        button.form__button(type="submit") Создать учетную запись
+
+.modal(id="modal-auth")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-fancybox-close)
+            use(xlink:href="#svg-close" data-fancybox-close)
+
+    .modal__title Войти
+
+    form.form(action="#" method="post")
+        fieldset.form__fieldset
+            label.form__label(for="auth-phone") Телефон
+            input.form__input(id="auth-phone" type="tel" name="phone" placeholder="")
+
+        fieldset.form__fieldset
+            label.form__label(for="auth-password") Пароль
+            input.form__input(id="auth-password" type="password" name="password" placeholder="")
+            button.form__password(type="button")
+                svg(class="_active" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href="#svg-password-show")
+                svg(width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href="#svg-password-hide")
+
+        .form__cols
+            fieldset.form__fieldset.form__checkbox
+                input(type="checkbox" id="auth__remember" name="remember" checked)
+                label(for="auth__remember")
+                    span
+                        svg(width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-check")
+                    | Запомнить меня
+            button.form__forgot(type="button") Забыли пароль?
+
+        .form__cols._center
+            button.form__button(type="submit") Войти
+            button.form__forgot.button._red(type="button" data-src="#modal-register" data-fancybox) Зарегистрироваться
+
+.modal.cities._small(id="modal-city")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-fancybox-close)
+            use(xlink:href="#svg-close" data-fancybox-close)
+
+    .modal__title Выберите город
+
+    form.search.cities__search._small(action="#" method="get")
+        input.search__input._grey(type="text" name="search" placeholder="Ваш город")
+        button.search__btn._grey(type="submit")
+            svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#svg-search")
+
+    ul.cities__list
+        li._big._active
+            a(href="#") Владимир
+            svg(width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#svg-check-city")
+        li._big
+            a(href="#") Москва
+        li._big
+            a(href="#") Нижний Новгород
+        li._big
+            a(href="#") Санкт-Петербург
+        li
+            a(href="#") Екатеринбург
+        li
+            a(href="#") Краснодар
+        li
+            a(href="#") Новосибирск
+        li
+            a(href="#") Ростов-на-Дону
+        li
+            a(href="#") Самара
+        li
+            a(href="#") Уфа
+        li
+            a(href="#") Челябинск
+
+.modal(id="modal-callback")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-fancybox-close)
+            use(xlink:href="#svg-close" data-fancybox-close)
+
+    .modal__title Заказать звонок
+
+    form.form(action="#" method="post")
+        fieldset.form__fieldset
+            label.form__label(for="callback-fullname") ФИО
+            input.form__input(id="callback-fullname" type="text" name="fullname" placeholder="")
+
+        fieldset.form__fieldset
+            label.form__label(for="callback-phone") Телефон
+            input.form__input(id="callback-phone" type="tel" name="phone" placeholder="")
+
+        fieldset.form__fieldset.form__checkbox
+            input(type="checkbox" id="callback-policy" name="policy" checked)
+            label(for="callback-policy")
+                span
+                    svg(width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-check")
+                | Принимаю условия на обработку персональных данных
+
+        button.form__button(type="submit") Отправить
+
+.modal(id="modal-enroll")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-fancybox-close)
+            use(xlink:href="#svg-close" data-fancybox-close)
+
+    .modal__title Записаться
+
+    form.form(action="#" method="post")
+        fieldset.form__fieldset
+            label.form__label(for="enroll-fullname") ФИО
+            input.form__input(id="enroll-fullname" type="text" name="fullname" placeholder="")
+
+        fieldset.form__fieldset
+            label.form__label(for="enroll-phone") Телефон
+            input.form__input(id="enroll-phone" type="tel" name="phone" placeholder="")
+
+        fieldset.form__fieldset.form__checkbox
+            input(type="checkbox" id="enroll-policy" name="policy" checked)
+            label(for="enroll-policy")
+                span
+                    svg(width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-check")
+                | Принимаю условия на обработку персональных данных
+
+        button.form__button(type="submit") Отправить
+
+.modal(id="modal-3d")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-fancybox-close)
+            use(xlink:href="#svg-close" data-fancybox-close)
+
+    .modal__title 3D
+    p Тут будет 3D просмотр

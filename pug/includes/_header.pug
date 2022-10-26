@@ -1,0 +1,85 @@
+header.header
+    .top
+        .container.top__cols
+            .top__col
+                .top__address г. Владимир, ул. Поселковая, д. 1
+                button.top__choose.triangle-down._grey(type="button" data-src="#modal-city" data-fancybox) Выбрать другой город
+
+            .top__col
+                a.top__link(href="mailto:") office@gidro-sistema.ru
+                a.top__link(href="tel:") 8 800 500 15 40
+
+    .header__content
+        .container.header__cols
+            a.header__logo(href="index.html")
+                svg(width="264" height="61" viewBox="0 0 264 61" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href="#svg-logo")
+
+            form.header__search.search(action="#" method="get")
+                input.search__input(type="text" name="search" placeholder="Поиск среди 1000 товаров")
+                button.search__btn(type="submit")
+                    svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-search")
+
+            .header__phone-scroll
+                a.top__link(href="tel:") 8 800 500 15 40
+
+            .header__controls
+                button.header__control(type="button" data-src="#modal-auth" data-fancybox)
+                    svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-auth")
+                    | Войти
+                button.header__control.cart(type="button")
+                    span.cart__icon
+                        svg(width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-cart")
+                        span.cart__count 5
+                    | Корзина
+
+            .header__controls-mobile
+                a.header__phone(href="tel:") 8 800 500 15 40
+
+                button.header__auth(type="button" data-src="#modal-auth" data-fancybox)
+                    svg(width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-user")
+
+    nav.nav
+        .container.nav__cols
+            .nav__controls
+                a.nav__catalog(href="#")
+                    span.nav__catalog-points
+                        span
+                        span
+                        span
+                    | Каталог
+
+                .nav__choose
+                    a.nav__choose-btn.triangle-down(href="#") Услуги СТО
+                    .nav__choose-wrap
+                        .nav__choose-box
+                            //Класс _active для активного li
+                            ul.nav__choose-list
+                                li
+                                    a(href="#") Ремонт рулевых реек
+                                li
+                                    a(href="#") Ремонт насосов ГУР
+                                li
+                                    a(href="#") Ремонт рулевых колонок
+
+            // Класс _active для активного li
+            ul.nav__list
+                li
+                    a(href="#") Контакты
+                li
+                    a(href="#") Учебный центр
+                li
+                    a(href="#") Гарантия
+                li
+                    a(href="#") Доставка и оплата
+                li
+                    a(href="#") О компании
+                li
+                    a(href="#") Вакансии
+
+
+

@@ -1,0 +1,45 @@
+.intro {
+	position: relative;
+	z-index: 2;
+
+	&__cols {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__col {
+		&._small {
+			min-width: 280px;
+			max-width: 280px;
+			padding-right: 30px;
+			position: relative;
+			z-index: 2;
+
+			@media (max-width: 991px) {
+				display: none;
+			}
+
+			&._products {
+				@media (max-width: 1400px) {
+					display: none;
+				}
+			}
+		}
+
+		&._big {
+			position: relative;
+			z-index: 1;
+			width: calc(100% - 280px);
+
+			@media (max-width: 991px) {
+				width: 100%;
+			}
+
+			&._products {
+				@media (max-width: 1400px) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

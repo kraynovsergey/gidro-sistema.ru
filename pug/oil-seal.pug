@@ -1,0 +1,123 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Сальник', description: 'Описание сальника', keywords: 'Ключи сальника'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            .container
+                include includes/_breadcrumbs-small
+
+                .section._pt0
+                    .product._list._page
+                        h2.product__title._visible-tablet SL-00009
+                        .product__col._image-page
+                            .product__top
+                                .product__labels
+                                    .product__label._blue Новинка
+                                button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                    svg(width="30" height="22" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        use(xlink:href="#svg-3d")
+
+                            .product__carousel
+                                .product__carousel-init
+                                    .product__carousel-item
+                                        a.product__img(href="img/tmp/oil-seal-big@2x.jpg" data-fancybox="product")
+                                            picture
+                                                source(type="image/webp" srcset="img/tmp/oil-seal-big@2x.webp 2x, img/tmp/oil-seal-big.webp 1x")
+                                                source(type="image/jpeg" srcset="img/tmp/oil-seal-big@2x.jpg 2x, img/tmp/oil-seal-big.jpg 1x")
+                                                img(src="img/tmp/oil-seal-big.jpg" alt="" width="535" height="363")
+                                    .product__carousel-item
+                                        a.product__img(href="img/tmp/oil-seal-big@2x.jpg" data-fancybox="product")
+                                            picture
+                                                source(type="image/webp" srcset="img/tmp/oil-seal-big@2x.webp 2x, img/tmp/oil-seal-big.webp 1x")
+                                                source(type="image/jpeg" srcset="img/tmp/oil-seal-big@2x.jpg 2x, img/tmp/oil-seal-big.jpg 1x")
+                                                img(src="img/tmp/oil-seal-big.jpg" alt="" width="535" height="363")
+                                    .product__carousel-item
+                                        a.product__img(href="img/tmp/oil-seal-big@2x.jpg" data-fancybox="product")
+                                            picture
+                                                source(type="image/webp" srcset="img/tmp/oil-seal-big@2x.webp 2x, img/tmp/oil-seal-big.webp 1x")
+                                                source(type="image/jpeg" srcset="img/tmp/oil-seal-big@2x.jpg 2x, img/tmp/oil-seal-big.jpg 1x")
+                                                img(src="img/tmp/oil-seal-big.jpg" alt="" width="535" height="363")
+
+                                .product__dots.dots._black
+                                    button.dots__item(type="button")
+                                    button.dots__item(type="button")
+                                    button.dots__item(type="button")
+
+                        .product__col._content-page
+
+                            h1.product__title._hidden-tablet SL-00009
+
+                            .product__features
+                                .product__feature
+                                    span Диаметр вала
+                                    span 25
+                                .product__feature
+                                    span Диаметр вала 2
+                                    span 35
+                                .product__feature
+                                    span Диаметр наружный
+                                    span 6.9
+                                .product__feature
+                                    span Высота
+                                    span 7
+                                .product__feature
+                                    span Высота 2
+                                    span 8
+                                .product__feature
+                                    span Тип
+                                    span Силовой
+                                .product__feature
+                                    span Тип по каталогу ORPAV
+                                    span 1PM
+
+                            //.product__params
+                                .product__params-col._full
+                                    .product__param <span>Применяется на авто:</span> NISSAN  OPEL  RENAULT
+                                .product__params-col._full
+                                    .product__param <span>Применение к агрегатам:</span>
+                                        a.product__param-link(href="#") OP031R
+                                        a.product__param-link(href="#") RE029R
+
+                            div
+                                a(href="img/tmp/oil-seal-page@2x.jpg" data-fancybox="product-page")
+                                    picture
+                                        source(type="image/webp" srcset="img/tmp/oil-seal-page@2x.webp 2x, img/tmp/oil-seal-page.webp 1x")
+                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-page@2x.jpg 2x, img/tmp/oil-seal-page.jpg 1x")
+                                        img.product__img-page(src="img/tmp/oil-seal-page.jpg" alt="" width="264" height="203")
+
+                        .product__col._controls-page
+                            form.product__controls(action="#" method="post")
+                                .product__price 20 046 ₽
+                                button.product__fast(type="button") Быстрая покупка
+                                .product__count
+                                    button._minus(type="button") -
+                                    input(type="text" name="count" value="1" readonly)
+                                    button._plus(type="button") +
+                                button.product__cart(type="submit") В корзину
+
+                            button.product__alert(type="button")
+                                svg(width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    use(xlink:href="#svg-alert")
+                                | Уведомить о поступлении
+
+                            .product__stocks
+                                // Класс _true для в наличии
+                                .product__stocks-status._false не в наличии
+
+                include includes/_tabs
+
+            include includes/_similar
+
+        include includes/_footer.pug
+
+        include includes/_panel.pug
+
+        include includes/_svg.pug
+
+        include includes/_modals.pug
+
+        include includes/_scripts.pug

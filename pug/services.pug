@@ -1,0 +1,463 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Услуги', description: 'Описание услуг', keywords: 'Ключи услуг'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            .container
+                include includes/_breadcrumbs-small
+
+            section.section.service-page._grey
+                .container
+
+                    .filter
+                        .filter__block._visible
+                            .category__h1 Выберите категорию ремонта
+
+                            .service-page__categories
+                                .service-page__category
+                                    .button-checkbox
+                                        input(type="radio" name="category" value="Рулевые рейки" id="category-1" checked)
+                                        label.button-checkbox__label(for="category-1")
+                                            .button-checkbox__content
+                                                svg(width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-services-category-1")
+                                                | Рулевые рейки
+                                            .button-checkbox__circle
+
+                                .service-page__category
+                                    .button-checkbox
+                                        input(type="radio" name="category" value="Насосы ГУР" id="category-2")
+                                        label.button-checkbox__label(for="category-2")
+                                            .button-checkbox__content
+                                                svg._stroke(width="46" height="36" viewBox="0 0 46 36" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-services-category-2")
+                                                | Насосы ГУР
+                                            .button-checkbox__circle
+
+                                .service-page__category
+                                    .button-checkbox
+                                        input(type="radio" name="category" value="Ремкомплекты" id="category-3")
+                                        label.button-checkbox__label(for="category-3")
+                                            .button-checkbox__content
+                                                svg(width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-services-category-3")
+                                                | Ремкомплекты
+                                            .button-checkbox__circle
+
+                        .filter__block
+                            .filter__title._w33 Для получения стоимости ремонта рулевой рейки выберите марку автомобиля
+                            .filter__cols
+                                .filter__col._col5
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-1" value="ACURA")
+                                        label(for="car-1") ACURA
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-2" value="AUDI")
+                                        label(for="car-2") AUDI
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-3" value="Alfa Romeo")
+                                        label(for="car-3") Alfa Romeo
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-4" value="Aston Martin")
+                                        label(for="car-4") Aston Martin
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-5" value="Aurus")
+                                        label(for="car-5") Aurus
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-6" value="BMW")
+                                        label(for="car-6") BMW
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-7" value="BYD")
+                                        label(for="car-7") BYD
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-8" value="Bentley")
+                                        label(for="car-8") Bentley
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-9" value="Brilliance")
+                                        label(for="car-9") Brilliance
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-10" value="Buick")
+                                        label(for="car-10") Buick
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-11" value="Cadillac")
+                                        label(for="car-11") Cadillac
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-12" value="Changan")
+                                        label(for="car-12") Changan
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-13" value="Chery")
+                                        label(for="car-13") Chery
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-14" value="Chevrolet")
+                                        label(for="car-14") Chevrolet
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-15" value="Chrysler")
+                                        label(for="car-15") Chrysler
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-16" value="Citroen")
+                                        label(for="car-16") Citroen
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-17" value="Dacia")
+                                        label(for="car-17") Dacia
+
+                                .filter__col._col5
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-18" value="Daewoo")
+                                        label(for="car-18") Daewoo
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-19" value="Daihatsu")
+                                        label(for="car-19") Daihatsu
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-20" value="Datsun")
+                                        label(for="car-20") Datsun
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-21" value="Dodge")
+                                        label(for="car-21") Dodge
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-22" value="DongFeng")
+                                        label(for="car-22") DongFeng
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-23" value="FAW")
+                                        label(for="car-23") FAW
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-24" value="Fiat")
+                                        label(for="car-24") Fiat
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-25" value="Ford")
+                                        label(for="car-25") Ford
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-26" value="Ford USA")
+                                        label(for="car-26") Ford USA
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-27" value="GAZ")
+                                        label(for="car-27") GAZ
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-28" value="GMC")
+                                        label(for="car-28") GMC
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-29" value="Geely")
+                                        label(for="car-29") Geely
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-30" value="Great Wall")
+                                        label(for="car-30") Great Wall
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-31" value="HaiMa")
+                                        label(for="car-31") HaiMa
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-32" value="Honda")
+                                        label(for="car-32") Honda
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-33" value="Hummer")
+                                        label(for="car-33") Hummer
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-34" value="Hyundai")
+                                        label(for="car-34") Hyundai
+
+                                .filter__col._col5
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-35" value="ISUZU")
+                                        label(for="car-35") ISUZU
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-36" value="Infiniti")
+                                        label(for="car-36") Infiniti
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-37" value="Iran Khodro")
+                                        label(for="car-37") Iran Khodro
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-38" value="Iveco")
+                                        label(for="car-38") Iveco
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-39" value="JAC")
+                                        label(for="car-39") JAC
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-40" value="JEEP")
+                                        label(for="car-40") JEEP
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-41" value="Jaguar")
+                                        label(for="car-41") Jaguar
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-42" value="KIA")
+                                        label(for="car-42") KIA
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-43" value="LDV")
+                                        label(for="car-43") LDV
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-44" value="Lada")
+                                        label(for="car-44") Lada
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-45" value="Lamborghini")
+                                        label(for="car-45") Lamborghini
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-46" value="Lancia")
+                                        label(for="car-46") Lancia
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-47" value="Land Rover")
+                                        label(for="car-47") Land Rover
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-48" value="Lexus")
+                                        label(for="car-48") Lexus
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-49" value="Lifan")
+                                        label(for="car-49") Lifan
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-50" value="Lincoln")
+                                        label(for="car-50") Lincoln
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-51" value="Maserati")
+                                        label(for="car-51") Maserati
+
+                                .filter__col._col5
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-52" value="Mazda")
+                                        label(for="car-52") Mazda
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-53" value="Mercedes")
+                                        label(for="car-53") Mercedes
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-54" value="Mini")
+                                        label(for="car-54") Mini
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-55" value="Mitsubishi")
+                                        label(for="car-55") Mitsubishi
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-56" value="Nissan")
+                                        label(for="car-56") Nissan
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-57" value="OPEL")
+                                        label(for="car-57") OPEL
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-58" value="Peugeot")
+                                        label(for="car-58") Peugeot
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-59" value="Plymouth")
+                                        label(for="car-59") Plymouth
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-60" value="Pontiac")
+                                        label(for="car-60") Pontiac
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-61" value="Porsche")
+                                        label(for="car-61") Porsche
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-62" value="Proton")
+                                        label(for="car-62") Proton
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-63" value="Ravon")
+                                        label(for="car-63") Ravon
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-64" value="Renault")
+                                        label(for="car-64") Renault
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-65" value="Rolls-Royce")
+                                        label(for="car-65") Rolls-Royce
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-66" value="Rover")
+                                        label(for="car-66") Rover
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-67" value="SAAB")
+                                        label(for="car-67") SAAB
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-68" value="SMART")
+                                        label(for="car-68") SMART
+
+                                .filter__col._col5
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-69" value="Saturn")
+                                        label(for="car-69") Saturn
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-70" value="Scion")
+                                        label(for="car-70") Scion
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-71" value="Seat")
+                                        label(for="car-71") Seat
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-72" value="Skoda")
+                                        label(for="car-72") Skoda
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-73" value="Ssang Yong")
+                                        label(for="car-73") Ssang Yong
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-74" value="Subaru")
+                                        label(for="car-74") Subaru
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-75" value="Suzuki")
+                                        label(for="car-75") Suzuki
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-76" value="Tagaz")
+                                        label(for="car-76") Tagaz
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-77" value="Tata")
+                                        label(for="car-77") Tata
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-78" value="Tesla")
+                                        label(for="car-78") Tesla
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-79" value="Toyota")
+                                        label(for="car-79") Toyota
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-80" value="VW")
+                                        label(for="car-80") VW
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-81" value="Volvo")
+                                        label(for="car-81") Volvo
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-82" value="Vortex")
+                                        label(for="car-82") Vortex
+                                    .filter__item.radio
+                                        input(type="radio" name="car" id="car-83" value="ZAZ")
+                                        label(for="car-83") ZAZ
+
+                        .filter__block
+                            .filter__title Выберете модель
+
+                            .filter__cols
+                                .filter__col._col4
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-1" value="Lancia Biturbo 1988-1994")
+                                        label(for="model-1")
+                                            span
+                                            | Lancia Biturbo 1988-1994
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-2" value="Lancia Dedra 1990-1999")
+                                        label(for="model-2")
+                                            span
+                                            | Lancia Dedra 1990-1999
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-3" value="Lancia Delta 2008-")
+                                        label(for="model-3")
+                                            span
+                                            | Lancia Delta 2008-
+
+                                .filter__col._col4
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-4" value="Lancia Delta Mk II 1994-1999")
+                                        label(for="model-4")
+                                            span
+                                            | Lancia Delta Mk II 1994-1999
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-5" value="Lancia Kappa 1994-2001")
+                                        label(for="model-5")
+                                            span
+                                            | Lancia Kappa 1994-2001
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-6" value="Lancia Musa 2003-")
+                                        label(for="model-6")
+                                            span
+                                            | Lancia Musa 2003-
+
+                                .filter__col._col4
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-7" value="Lancia Phedra 2002-")
+                                        label(for="model-7")
+                                            span
+                                            | Lancia Phedra 2002-
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-8" value="Lancia Thema 1987-1994")
+                                        label(for="model-8")
+                                            span
+                                            | Lancia Thema 1987-1994
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-9" value="Lancia Thema II 2011-")
+                                        label(for="model-9")
+                                            span
+                                            | Lancia Thema II 2011-
+
+                                .filter__col._col4
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-10" value="Lancia Thesis 2002-2009")
+                                        label(for="model-10")
+                                            span
+                                            | Lancia Thesis 2002-2009
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-11" value="Lancia Y 1995-2003")
+                                        label(for="model-11")
+                                            span
+                                            | Lancia Y 1995-2003
+                                    .filter__item.checkbox
+                                        input(type="checkbox" name="model[]" id="model-12" value="Lancia Zeta 1995-2002")
+                                        label(for="model-12")
+                                            span
+                                            | Lancia Zeta 1995-2002
+
+                    .filter__mobile
+                        .filter__title Для получения стоимости ремонта рулевой рейки выберите Ваш автомобиль
+
+                        .filter__mobile-controls
+                            button.filter__mobile-control.show-panel.triangle-down._car(type="button" data-src=".mobile-car") Выберите марку
+                            button.filter__mobile-control.show-panel.triangle-down._model(type="button" data-src=".mobile-model" data-default="Выберите модель") Выберите модель
+
+            .section
+                .container
+                    .service
+                        .service__content
+                            a.service__title(href="#") Название услуги
+                            .service__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            .product__param
+                                span Модель авто:
+                                | Mercedes GLK X204 2008-2015, Mercedes C W204 / S204 2007
+                        .service__controls
+                            .service__price 20 046 ₽
+                            button.service__button(type="button" data-fancybox data-src="#modal-enroll") Записаться
+
+                    .service
+                        .service__content
+                            a.service__title(href="#") Название услуги
+                            .service__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            .product__param
+                                span Модель авто:
+                                | Mercedes GLK X204 2008-2015, Mercedes C W204 / S204 2007
+                        .service__controls
+                            .service__price 20 046 ₽
+                            button.service__button(type="button" data-fancybox data-src="#modal-enroll") Записаться
+
+                    .service
+                        .service__content
+                            a.service__title(href="#") Название услуги
+                            .service__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            .product__param
+                                span Модель авто:
+                                | Mercedes GLK X204 2008-2015, Mercedes C W204 / S204 2007
+                        .service__controls
+                            .service__price 20 046 ₽
+                            button.service__button(type="button" data-fancybox data-src="#modal-enroll") Записаться
+
+                    .service
+                        .service__content
+                            a.service__title(href="#") Название услуги
+                            .service__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            .product__param
+                                span Модель авто:
+                                | Mercedes GLK X204 2008-2015, Mercedes C W204 / S204 2007
+                        .service__controls
+                            .service__price 20 046 ₽
+                            button.service__button(type="button" data-fancybox data-src="#modal-enroll") Записаться
+
+            section.section.text._pt0
+                .container
+                    h1.category__h1 Стоимость ремонта рулевых реек
+                    p Заметили проблемы с управляемостью автомобиля? Шумы при повороте руля? Вероятно, вышла из строя рулевая рейка.
+                    p Это досадная неприятность, которая раньше заставила бы вас на неопределенный срок стать пассажиром общественного транспорта и ждать долгие очереди на диагностику и ремонт автомобиля. К тому же, потери времени, сил и денег при таком раскладе были бы колоссальными.
+                    p Все проблемы теперь в прошлом, с компанией «Гидро-система». Мы занимаемся не только продажей оригинальных комплектующих, но и восстановлением и ремонтом рулевых реек для любых марок автомобиля. Расходы на ремонт при этом значительно снижаются, а технология, разработанная совместно с оригинальными производителями, позволяет добиться идентичного функционала восстановленной и новой детали.
+                    p Новейшие технологии и оборудование, применяемые в нашей компании — это ваша возможность экономии на покупке новой детали. Мы устраняем и локализуем процессы, ухудшающие состояние детали, производим замену изношенных частей и проводим согласование работы механизмов. Завершением ремонта является обязательное проведение тестов на работоспособность детали и ее соответствие заявленным характеристикам. Сборка и установка, заключительные, но немаловажные процессы и выполняются с максимальной тщательностью. Предоставляемая гарантия — залог эффективности ремонта и нашей надежности.
+                    p Чтобы определить стоимость ремонта рулевой рейки для вашей модели авто, воспользуйтесь формой ниже.
+
+                    .video
+                        picture
+                            source(type="image/webp" srcset="img/tmp/service-img@2x.webp 2x, img/tmp/service-img.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/service-img@2x.jpg 2x, img/tmp/service-img.jpg 1x")
+                            img.video__img(src="img/tmp/service-img.jpg" alt="" width="1366" height="768")
+                        a.video__link(href="https://www.youtube.com/watch?v=mW4T0ZaiGno" data-fancybox)
+                            .video__play
+
+        include includes/_footer.pug
+
+        include includes/_panel.pug
+
+        include includes/_svg.pug
+
+        include includes/_modals.pug
+
+        include includes/_scripts.pug

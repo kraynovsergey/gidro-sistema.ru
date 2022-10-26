@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Главная страница', description: 'Описание главной страницы', keywords: 'Ключи главной страницы'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		main.main
+			include includes/_intro.pug
+
+			include includes/_products-small.pug
+
+			include includes/_about.pug
+
+		include includes/_footer.pug
+
+		include includes/_panel.pug
+
+		include includes/_svg.pug
+
+		include includes/_modals.pug
+
+		include includes/_scripts.pug

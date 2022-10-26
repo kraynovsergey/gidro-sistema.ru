@@ -1,0 +1,72 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Личные данные', description: 'Описание личных данных', keywords: 'Ключи личных данныъ'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            .container
+                include includes/_breadcrumbs-small
+
+            section.profile
+                .container
+                    .profile__top
+                        h1.profile__h1.category__h1 Личные данные
+
+                        .profile__controls
+                            button.profile__change(type="button" data-change="Изменить" data-save="Сохранить") Изменить
+                            a.profile__orders(href="#") Мои заказы
+
+                .section._grey
+                    .container
+                        form.profile__form(action="")
+                            .profile__block
+                                .profile__head
+                                    .profile__title ФИО
+                                    button.profile__change._block(type="button" data-change="Изменить" data-save="Сохранить") Изменить
+
+                                .profile__cols
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="text" name="lastname" value="Иванов" readonly)
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="text" name="firstname" value="Иван" readonly)
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="text" name="patronymic" value="Иванович" readonly)
+
+                            .profile__block
+                                .profile__head
+                                    .profile__title Адрес
+                                    button.profile__change._block(type="button" data-change="Изменить" data-save="Сохранить") Изменить
+
+                                .profile__cols
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="text" name="city" value="Москва" readonly)
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="text" name="street" value="ул. Вязов" readonly)
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="text" name="building" value="дом 45А" readonly)
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="text" name="room" value="кв. 45" readonly)
+
+                            .profile__block
+                                .profile__head
+                                    .profile__title Контакты
+                                    button.profile__change._block(type="button" data-change="Изменить" data-save="Сохранить") Изменить
+
+                                .profile__cols
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="tel" name="phone" value="+7 (999) 999-99-99" readonly)
+                                    fieldset.profile__fieldset
+                                        input.profile__input(type="email" name="email" value="ivan@mail.ru" readonly)
+
+        include includes/_footer.pug
+
+        include includes/_panel.pug
+
+        include includes/_svg.pug
+
+        include includes/_modals.pug
+
+        include includes/_scripts.pug

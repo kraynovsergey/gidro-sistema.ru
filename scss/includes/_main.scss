@@ -1,0 +1,15 @@
+.main {
+	padding: 280px 0 0;
+
+	@media (max-width: 991px) {
+		padding-top: 25px;
+	}
+
+	&._pt0 {
+		padding-top: 233px;
+
+		@media (max-width: 991px) {
+			padding-top: 10px;
+		}
+	}
+}

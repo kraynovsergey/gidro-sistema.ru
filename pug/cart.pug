@@ -1,0 +1,166 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Корзина', description: 'Описание корзины', keywords: 'Ключи корзины'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+        main.main._pt0
+            section.section.cart-page._grey
+                .container
+                    include includes/_breadcrumbs-small
+
+                    h1.category__h1 Корзина
+
+                    .cart-page__top
+                        .cart-page__total-count Количество товаров: 2
+                        .cart-page__top-controls
+                            .cart-page__total-price Итого:
+                                span 20 046 ₽
+                            button.cart-page__submit(type="button") Оформить заказ
+
+                    .cart-page__items
+                        .cart-page__item
+                            .cart-page__img
+                                .product__carousel.cart-page__carousel
+                                    .product__carousel-init
+                                        .product__carousel-item
+                                            a.product__img(href="#")
+                                                picture
+                                                    source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                    source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                    img(src="img/tmp/cart-img.jpg" alt="" width="180" height="100")
+                                        .product__carousel-item
+                                            a.product__img(href="#")
+                                                picture
+                                                    source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                    source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                    img(src="img/tmp/cart-img.jpg" alt="" width="180" height="100")
+                                        .product__carousel-item
+                                            a.product__img(href="#")
+                                                picture
+                                                    source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                    source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                    img(src="img/tmp/cart-img.jpg" alt="" width="180" height="100")
+
+                                    .product__dots.cart-page__dots.dots._black
+                                        button.dots__item(type="button")
+                                        button.dots__item(type="button")
+                                        button.dots__item(type="button")
+
+                            .cart-page__content
+                                a.cart-page__title(href="#") 2GS4454 Lancia Biturbo 1988-1994
+
+                                .cart-page__controls
+                                    .cart-page__price-unit цена за 1 шт
+                                        span 20 046 ₽
+                                    .cart-page__count.product__count
+                                        button._minus(type="button") -
+                                        input(type="text" name="count" value="1" readonly)
+                                        button._plus(type="button") +
+                                    .cart-page__price 40 092 ₽
+
+                                button.cart-page__remove(type="button")
+                                    svg(width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        use(xlink:href="#svg-remove")
+
+                        .cart-page__item
+                            .cart-page__img
+                                .product__carousel.cart-page__carousel
+                                    .product__carousel-init
+                                        .product__carousel-item
+                                            a.product__img(href="#")
+                                                picture
+                                                    source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                    source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                    img(src="img/tmp/cart-img.jpg" alt="" width="180" height="100")
+                                        .product__carousel-item
+                                            a.product__img(href="#")
+                                                picture
+                                                    source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                    source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                    img(src="img/tmp/cart-img.jpg" alt="" width="180" height="100")
+                                        .product__carousel-item
+                                            a.product__img(href="#")
+                                                picture
+                                                    source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                    source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                    img(src="img/tmp/cart-img.jpg" alt="" width="180" height="100")
+
+                                    .product__dots.cart-page__dots.dots._black
+                                        button.dots__item(type="button")
+                                        button.dots__item(type="button")
+                                        button.dots__item(type="button")
+
+                            .cart-page__content
+                                a.cart-page__title(href="#") 2GS4454 Lancia Biturbo 1988-1994
+
+                                .cart-page__controls
+                                    .cart-page__price-unit цена за 1 шт
+                                        span 20 046 ₽
+                                    .cart-page__count.product__count
+                                        button._minus(type="button") -
+                                        input(type="text" name="count" value="1" readonly)
+                                        button._plus(type="button") +
+                                    .cart-page__price 40 092 ₽
+
+                                button.cart-page__remove(type="button")
+                                    svg(width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        use(xlink:href="#svg-remove")
+
+                    .cart-page__clear
+                        button(type="button")
+                            span
+                            | Очистить корзину
+
+            section.section._grey._pt0
+                .container
+                    h3.section__h3 Оформление заказа
+
+                    form.get-order(action="#")
+                        .get-order__item._active
+                            .get-order__title
+                                span 1
+                                | Регион доставки
+
+                            .get-order__content
+                                fieldset.get-order__fieldset
+                                    label.get-order__label
+                                        sup *
+                                        | Местоположение
+                                    input.get-order__input(type="text" name="location")
+                                    .get-order__description Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+                                button.get-order__btn(type="button" disabled) Далее
+
+                        .get-order__item
+                            .get-order__title
+                                span 2
+                                | Доставка
+                        .get-order__item
+                            .get-order__title
+                                span 3
+                                | Оплата
+                        .get-order__item
+                            .get-order__title
+                                span 4
+                                | Покупатель
+
+                        .get-order__total
+                            .get-order__total-box
+                                .get-order__total-params
+                                    .get-order__total-param Товаров на:
+                                        span 20 046 ₽
+                                    .get-order__total-param Доставка:
+                                        span по тарифам ТК
+                                .get-order__total-itogo Итого:
+                                    span 40 092 ₽
+
+        include includes/_footer.pug
+
+        include includes/_panel.pug
+
+        include includes/_svg.pug
+
+        include includes/_modals.pug
+
+        include includes/_scripts.pug

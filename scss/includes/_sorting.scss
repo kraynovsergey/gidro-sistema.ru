@@ -1,0 +1,145 @@
+.sorting {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 30px;
+
+	&__col {
+		@media (max-width: 991px) {
+			display: none !important;
+		}
+
+		&._small {
+			padding-left: 30px;
+		}
+
+		&._big {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: .77rem;
+		margin-bottom: 15px;
+		font-weight: 300;
+
+		@media (max-width: 991px) {
+			font-size: 1rem;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		color: $color_grey_font;
+		margin-right: 30px;
+
+		@media (max-width: 991px) {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__item {
+		color: inherit;
+		text-decoration: none;
+		margin-right: 30px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 575px) {
+			margin-bottom: 10px;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&._active {
+			font-weight: 500;
+			color: $color_black !important;
+		}
+	}
+
+	&__price {
+		width: 14px;
+		height: 11px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-left: 10px;
+
+		& span {
+			width: 100%;
+			height: 1px;
+			background: $color_black;
+		}
+
+		&._desc {
+			& span {
+				&:nth-child(2) {
+					width: 60%;
+				}
+
+				&:nth-child(3) {
+					width: 30%;
+				}
+			}
+		}
+
+		&._asc {
+			& span {
+				&:nth-child(1) {
+					width: 30%;
+				}
+
+				&:nth-child(2) {
+					width: 60%;
+				}
+
+				&:nth-child(3) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__mobile {
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		@media (max-width: 991px) {
+			display: flex;
+		}
+
+		&-btn {
+			width: calc(50% - 15px);
+			height: 40px;
+			border: 1px solid $color_grey_border;
+			font-size: 1.06rem;
+			border-radius: 5px;
+
+			@media (max-width: 767px) {
+				width: calc(50% - 7.5px);
+				font-size: 1.14rem;
+			}
+		}
+	}
+
+	&__panel {
+		@media (max-width: 991px) {
+			padding-bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,536 @@
+.panel
+    .container.panel__cols
+        a.panel__item(href="tel:88005001540")
+            svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#svg-phone")
+            | Телефон
+        button.panel__item(type="button" data-src=".mobile-catalog")
+            svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#svg-catalog")
+            | Каталог
+        a.panel__item(href="#")
+            svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#svg-cart")
+            | Корзина
+        a.panel__item(href="#")
+            svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#svg-service")
+            | СТО
+        button.panel__item(type="button" data-src=".mobile-menu")
+            svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#svg-menu")
+            | Меню
+
+    .panel__box.mobile-menu
+        .panel__box-swipe
+        .container.panel__box-content
+            .mobile-menu__controls
+                button.mobile-menu__control(type="button" data-src="#modal-auth" data-fancybox)
+                    svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-auth")
+                    | Войти
+
+                a.mobile-menu__control(href="#")
+                    span.cart__icon
+                        svg(width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-cart")
+                        span.cart__count 5
+                    | Корзина
+
+            // Класс _active для активного li
+            ul.mobile-menu__list
+                li
+                    a(href="#") О компании
+                li
+                    a(href="#") Гарантия
+                li
+                    a(href="#") Доставка и оплата
+                li
+                    a(href="#") Сертификаты
+                li
+                    a(href="#") Вакансии
+                li
+                    a(href="#") Контакты
+
+            .mobile-menu__footer
+                .mobile-menu__choose
+                    button.mobile-menu__choose-btn.triangle-down._grey(type="button" data-src="#modal-city" data-fancybox) Выбрать другой город
+                    .mobile-menu__address г. Владимир, ул. Поселковая 1
+
+                a.mobile-menu__email(href="mailto:") 8 800 500 15 40
+
+                button.mobile-menu__callback.callback(type="button" data-src="#modal-callback" data-fancybox)
+                    svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-callback")
+                    | Заказать звонок
+
+    .panel__box.mobile-catalog
+        .panel__box-swipe
+        .container.panel__box-content
+            .nav__controls.mobile-catalog__controls
+                a.nav__catalog.mobile-catalog__control(href="#")
+                    span.nav__catalog-points
+                        span
+                        span
+                        span
+                    | Каталог
+
+                .nav__choose.mobile-catalog__control
+                    button.nav__choose-btn.triangle-down(type="button") УСЛУГИ СТО
+                    .nav__choose-wrap
+                        .nav__choose-box
+                            //Класс _active для активного li
+                            ul.nav__choose-list
+                                li
+                                    a(href="#") Ремонт рулевых реек
+                                li
+                                    a(href="#") Ремонт насосов ГУР
+                                li
+                                    a(href="#") Ремонт рулевых колонок
+
+            //Класс _active для активного li
+            ul.aside-catalog.mobile-catalog__list
+                li
+                    a(href="#").triangle-right
+                        svg(width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-category-1")
+                        | Рулевые рейки
+                li
+                    a(href="#").triangle-right
+                        svg(width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-category-2")
+                        | Насосы ГУР
+                li
+                    a(href="#").triangle-right
+                        svg(width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-category-3")
+                        | Ремкомплекты
+                li
+                    a(href="#").triangle-right
+                        svg(width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-category-4")
+                        | Оборудование
+                li
+                    a(href="#").triangle-right
+                        svg(width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-category-5")
+                        | Специнструмент
+                li
+                    a(href="#").triangle-right
+                        svg(width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-category-6")
+                        | Сальники
+                li._parent
+                    a(href="#").triangle-right
+                        svg(width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-category-7")
+                        | Комплектующие
+                        span.mobile-catalog__list-control
+
+                    //Класс _active для активного li
+                    ul.aside-catalog__sub.mobile-catalog__sublist
+                        li
+                            a(href="#") Сальники
+                        li
+                            a(href="#") Сайлентблоки
+                        li
+                            a(href="#") Штоки рулевых реек
+                        li
+                            a(href="#") Гайки поджима
+                        li
+                            a(href="#") Втулки
+                        li
+                            a(href="#") Заглушки
+                        li
+                            a(href="#") Резиновые кольца
+                        li
+                            a(href="#") Прокладки
+                        li
+                            a(href="#") Тефлоновые кольца
+                        li
+                            a(href="#") Хомуты
+                        li
+                            a(href="#") Подшипники
+                        li
+                            a(href="#") Пыльники рулевых реек
+                        li
+                            a(href="#") Фолье-вставки
+                        li
+                            a(href="#") Тяги рулевых реек
+                        li
+                            a(href="#") Бачки ГУР
+                        li
+                            a(href="#") Трубки рулевых реек
+                        li
+                            a(href="#") Детали EPS
+                        li
+                            a(href="#") Шкивы насосов ГУР
+                        li
+                            a(href="#") Поршни
+                        li
+                            a(href="#") Другое
+
+    .panel__box.mobile-car
+        .panel__box-swipe
+        .container.panel__box-content
+            .filter__panel
+                .filter__panel-title Выберете марку
+
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-1" value="ACURA")
+                    label(for="car-mobile-1") ACURA
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-2" value="AUDI")
+                    label(for="car-mobile-2") AUDI
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-3" value="Alfa Romeo")
+                    label(for="car-mobile-3") Alfa Romeo
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-4" value="Aston Martin")
+                    label(for="car-mobile-4") Aston Martin
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-5" value="Aurus")
+                    label(for="car-mobile-5") Aurus
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-6" value="BMW")
+                    label(for="car-mobile-6") BMW
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-7" value="BYD")
+                    label(for="car-mobile-7") BYD
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-8" value="Bentley")
+                    label(for="car-mobile-8") Bentley
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-9" value="Brilliance")
+                    label(for="car-mobile-9") Brilliance
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-10" value="Buick")
+                    label(for="car-mobile-10") Buick
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-11" value="Cadillac")
+                    label(for="car-mobile-11") Cadillac
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-12" value="Changan")
+                    label(for="car-mobile-12") Changan
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-13" value="Chery")
+                    label(for="car-mobile-13") Chery
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-14" value="Chevrolet")
+                    label(for="car-mobile-14") Chevrolet
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-15" value="Chrysler")
+                    label(for="car-mobile-15") Chrysler
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-16" value="Citroen")
+                    label(for="car-mobile-16") Citroen
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-17" value="Dacia")
+                    label(for="car-mobile-17") Dacia
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-18" value="Daewoo")
+                    label(for="car-mobile-18") Daewoo
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-19" value="Daihatsu")
+                    label(for="car-mobile-19") Daihatsu
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-20" value="Datsun")
+                    label(for="car-mobile-20") Datsun
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-21" value="Dodge")
+                    label(for="car-mobile-21") Dodge
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-22" value="DongFeng")
+                    label(for="car-mobile-22") DongFeng
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-23" value="FAW")
+                    label(for="car-mobile-23") FAW
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-24" value="Fiat")
+                    label(for="car-mobile-24") Fiat
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-25" value="Ford")
+                    label(for="car-mobile-25") Ford
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-26" value="Ford USA")
+                    label(for="car-mobile-26") Ford USA
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-27" value="GAZ")
+                    label(for="car-mobile-27") GAZ
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-28" value="GMC")
+                    label(for="car-mobile-28") GMC
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-29" value="Geely")
+                    label(for="car-mobile-29") Geely
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-30" value="Great Wall")
+                    label(for="car-mobile-30") Great Wall
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-31" value="HaiMa")
+                    label(for="car-mobile-31") HaiMa
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-32" value="Honda")
+                    label(for="car-mobile-32") Honda
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-33" value="Hummer")
+                    label(for="car-mobile-33") Hummer
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-34" value="Hyundai")
+                    label(for="car-mobile-34") Hyundai
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-35" value="ISUZU")
+                    label(for="car-mobile-35") ISUZU
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-36" value="Infiniti")
+                    label(for="car-mobile-36") Infiniti
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-37" value="Iran Khodro")
+                    label(for="car-mobile-37") Iran Khodro
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-38" value="Iveco")
+                    label(for="car-mobile-38") Iveco
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-39" value="JAC")
+                    label(for="car-mobile-39") JAC
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-40" value="JEEP")
+                    label(for="car-mobile-40") JEEP
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-41" value="Jaguar")
+                    label(for="car-mobile-41") Jaguar
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-42" value="KIA")
+                    label(for="car-mobile-42") KIA
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-43" value="LDV")
+                    label(for="car-mobile-43") LDV
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-44" value="Lada")
+                    label(for="car-mobile-44") Lada
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-45" value="Lamborghini")
+                    label(for="car-mobile-45") Lamborghini
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-46" value="Lancia")
+                    label(for="car-mobile-46") Lancia
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-47" value="Land Rover")
+                    label(for="car-mobile-47") Land Rover
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-48" value="Lexus")
+                    label(for="car-mobile-48") Lexus
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-49" value="Lifan")
+                    label(for="car-mobile-49") Lifan
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-50" value="Lincoln")
+                    label(for="car-mobile-50") Lincoln
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-51" value="Maserati")
+                    label(for="car-mobile-51") Maserati
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-52" value="Mazda")
+                    label(for="car-mobile-52") Mazda
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-53" value="Mercedes")
+                    label(for="car-mobile-53") Mercedes
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-54" value="Mini")
+                    label(for="car-mobile-54") Mini
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-55" value="Mitsubishi")
+                    label(for="car-mobile-55") Mitsubishi
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-56" value="Nissan")
+                    label(for="car-mobile-56") Nissan
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-57" value="OPEL")
+                    label(for="car-mobile-57") OPEL
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-58" value="Peugeot")
+                    label(for="car-mobile-58") Peugeot
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-59" value="Plymouth")
+                    label(for="car-mobile-59") Plymouth
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-60" value="Pontiac")
+                    label(for="car-mobile-60") Pontiac
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-61" value="Porsche")
+                    label(for="car-mobile-61") Porsche
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-62" value="Proton")
+                    label(for="car-mobile-62") Proton
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-63" value="Ravon")
+                    label(for="car-mobile-63") Ravon
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-64" value="Renault")
+                    label(for="car-mobile-64") Renault
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-65" value="Rolls-Royce")
+                    label(for="car-mobile-65") Rolls-Royce
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-66" value="Rover")
+                    label(for="car-mobile-66") Rover
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-67" value="SAAB")
+                    label(for="car-mobile-67") SAAB
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-68" value="SMART")
+                    label(for="car-mobile-68") SMART
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-69" value="Saturn")
+                    label(for="car-mobile-69") Saturn
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-70" value="Scion")
+                    label(for="car-mobile-70") Scion
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-71" value="Seat")
+                    label(for="car-mobile-71") Seat
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-72" value="Skoda")
+                    label(for="car-mobile-72") Skoda
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-73" value="Ssang Yong")
+                    label(for="car-mobile-73") Ssang Yong
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-74" value="Subaru")
+                    label(for="car-mobile-74") Subaru
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-75" value="Suzuki")
+                    label(for="car-mobile-75") Suzuki
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-76" value="Tagaz")
+                    label(for="car-mobile-76") Tagaz
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-77" value="Tata")
+                    label(for="car-mobile-77") Tata
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-78" value="Tesla")
+                    label(for="car-mobile-78") Tesla
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-79" value="Toyota")
+                    label(for="car-mobile-79") Toyota
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-80" value="VW")
+                    label(for="car-mobile-80") VW
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-81" value="Volvo")
+                    label(for="car-mobile-81") Volvo
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-82" value="Vortex")
+                    label(for="car-mobile-82") Vortex
+                .filter__item.radio
+                    input(type="radio" name="car" id="car-mobile-83" value="ZAZ")
+                    label(for="car-mobile-83") ZAZ
+
+    .panel__box.mobile-model
+        .panel__box-swipe
+        .container.panel__box-content
+            .filter__panel
+                .filter__panel-title Выберете модель
+
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-1" value="Lancia Biturbo 1988-1994")
+                    label(for="model-mobile-1")
+                        span
+                        | Lancia Biturbo 1988-1994
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-2" value="Lancia Dedra 1990-1999")
+                    label(for="model-mobile-2")
+                        span
+                        | Lancia Dedra 1990-1999
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-3" value="Lancia Delta 2008-")
+                    label(for="model-mobile-3")
+                        span
+                        | Lancia Delta 2008-
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-4" value="Lancia Delta Mk II 1994-1999")
+                    label(for="model-mobile-4")
+                        span
+                        | Lancia Delta Mk II 1994-1999
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-5" value="Lancia Kappa 1994-2001")
+                    label(for="model-mobile-5")
+                        span
+                        | Lancia Kappa 1994-2001
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-6" value="Lancia Musa 2003-")
+                    label(for="model-mobile-6")
+                        span
+                        | Lancia Musa 2003-
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-7" value="Lancia Phedra 2002-")
+                    label(for="model-mobile-7")
+                        span
+                        | Lancia Phedra 2002-
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-8" value="Lancia Thema 1987-1994")
+                    label(for="model-mobile-8")
+                        span
+                        | Lancia Thema 1987-1994
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-9" value="Lancia Thema II 2011-")
+                    label(for="model-mobile-9")
+                        span
+                        | Lancia Thema II 2011-
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-10" value="Lancia Thesis 2002-2009")
+                    label(for="model-mobile-10")
+                        span
+                        | Lancia Thesis 2002-2009
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-11" value="Lancia Y 1995-2003")
+                    label(for="model-mobile-11")
+                        span
+                        | Lancia Y 1995-2003
+                .filter__item.checkbox
+                    input(type="checkbox" name="model[]" id="model-mobile-12" value="Lancia Zeta 1995-2002")
+                    label(for="model-mobile-12")
+                        span
+                        | Lancia Zeta 1995-2002
+
+    .panel__box.mobile-sorting
+        .panel__box-swipe
+        .container.panel__box-content.sorting__panel
+            //.sorting__row
+                .sorting__title Сортировать:
+                //Класс _active для активного элемента
+                a.sorting__item._active(href="#") По умолчанию
+                a.sorting__item(href="#") По ценe
+                    //Класс _asc для обратного порядка
+                    span.sorting__price._desc
+                        span
+                        span
+                        span
+                a.sorting__item(href="#") По наличию
+                a.sorting__item(href="#") По наименованию
+
+            .sorting__row
+                .sorting__title Состояние:
+                //Класс _active для активного элемента
+                a.sorting__item._active(href="#") Все
+                a.sorting__item(href="#") Новые оригинальные
+                a.sorting__item(href="#") Новые аналоги
+                a.sorting__item(href="#") Восстановленные
+
+    .panel__box.mobile-sorting-oil-seals
+        .panel__box-swipe
+        .container.panel__box-content.sorting__panel
+            .sorting__row
+                .sorting__title Сортировать:
+                //Класс _active для активного элемента
+                a.sorting__item._active(href="#") По умолчанию
+                a.sorting__item(href="#") По ценe
+                    //Класс _asc для обратного порядка
+                    span.sorting__price._desc
+                        span
+                        span
+                        span
+                a.sorting__item(href="#") По наличию
+                a.sorting__item(href="#") По артикулу
+                a.sorting__item(href="#") По типу
+                a.sorting__item(href="#") По размеру

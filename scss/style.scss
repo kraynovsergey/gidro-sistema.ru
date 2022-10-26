@@ -1,0 +1,64 @@
+$color_black: #151515;
+$color_grey: #F3F3F3;
+$color_grey_font: #979797;
+$color_grey_border: #D2D2D2;
+$color_red: #CA2C2A;
+$color_white: #FFFFFF;
+$color_blue: #076696;
+$color_green: #00A45F;
+
+$transition: 0.5s ease;
+
+@import "includes/reboot";
+@import "includes/grid";
+@import "includes/fonts";
+@import "includes/default";
+
+@import "includes/ui";
+@import "includes/svg";
+
+@import "includes/header";
+@import "includes/top";
+@import "includes/cart";
+@import "includes/search";
+@import "includes/nav";
+@import "includes/main";
+@import "includes/section";
+@import "includes/intro";
+@import "includes/aside-catalog";
+@import "includes/intro-slider";
+@import "includes/panel";
+@import "includes/mobile-menu";
+@import "includes/mobile-catalog";
+@import "includes/numbers";
+@import "includes/product";
+@import "includes/slider";
+@import "includes/about";
+@import "includes/footer";
+@import "includes/copyright";
+@import "includes/modal";
+@import "includes/form";
+@import "includes/cities";
+@import "includes/breadcrumbs";
+@import "includes/catalog";
+@import "includes/category";
+@import "includes/filter";
+@import "includes/radio";
+@import "includes/checkbox";
+@import "includes/sorting";
+@import "includes/template";
+@import "includes/tabs";
+@import "includes/service-page";
+@import "includes/button-checkbox";
+@import "includes/service";
+@import "includes/video";
+@import "includes/cart-page";
+@import "includes/get-order";
+@import "includes/profile";
+@import "includes/order";
+
+
+
+
+
+

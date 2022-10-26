@@ -1,0 +1,855 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Сальники', description: 'Описание сальников', keywords: 'Ключи сальников'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            .section.intro._pt0
+                .container.intro__cols
+                    .intro__col._small
+                        include includes/_aside.pug
+
+                    .intro__col._big
+                        include includes/_breadcrumbs-small
+
+                        .section.category._pt0
+                            h1.category__h1 Сальники
+
+                            .category__block
+                                .category__block-img
+                                    picture
+                                        source(type="image/webp" srcset="img/tmp/oil-seal-category@2x.webp 2x, img/tmp/oil-seal-category.webp 1x")
+                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-category@2x.jpg 2x, img/tmp/oil-seal-category.jpg 1x")
+                                        img(src="img/tmp/oil-seal-category.jpg" alt="" width="309" height="205")
+
+                                .category__block-text
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                                    .category__alerts
+                                        button.category__alert(type="button") Типы сальников
+                                        button.category__alert(type="button") Как подобрать сальник
+
+                        .filter
+                            .filter__title Подберите сальник для Вашего автомобиля
+
+                            .filter__seals
+                                .filter__seal
+                                    .filter__seal-title Диаметр вала мм
+                                    .filter__seal-controls
+                                        input.filter__seal-input(type="text" name="seal1_1" placeholder="0")
+                                        .filter__seal-controls-btns
+                                            button(type="button") +
+                                            button(type="button") -
+                                        input.filter__seal-input(type="text" name="seal1_2" placeholder="0.03")
+
+                                .filter__seal
+                                    .filter__seal-title Диаметр вала 2 мм
+                                    .filter__seal-controls
+                                        input.filter__seal-input(type="text" name="seal2_1" placeholder="0")
+                                        .filter__seal-controls-btns
+                                            button(type="button") +
+                                            button(type="button") -
+                                        input.filter__seal-input(type="text" name="seal2_2" placeholder="0.03")
+
+                                .filter__seal
+                                    .filter__seal-title Наружный диаметр мм
+                                    .filter__seal-controls
+                                        input.filter__seal-input(type="text" name="seal3_1" placeholder="0")
+                                        .filter__seal-controls-btns
+                                            button(type="button") +
+                                            button(type="button") -
+                                        input.filter__seal-input(type="text" name="seal3_2" placeholder="0.03")
+
+                                .filter__seal
+                                    .filter__seal-title Высота мм
+                                    .filter__seal-controls
+                                        input.filter__seal-input(type="text" name="seal4_1" placeholder="0")
+                                        .filter__seal-controls-btns
+                                            button(type="button") +
+                                            button(type="button") -
+                                        input.filter__seal-input(type="text" name="seal4_2" placeholder="0.03")
+
+                                .filter__seal
+                                    .filter__seal-title Высота 2 мм
+                                    .filter__seal-controls
+                                        input.filter__seal-input(type="text" name="seal5_1" placeholder="0")
+                                        .filter__seal-controls-btns
+                                            button(type="button") +
+                                            button(type="button") -
+                                        input.filter__seal-input(type="text" name="seal5_2" placeholder="0.03")
+
+                                .filter__seal
+                                    .filter__seal-title Выберите тип
+                                    .filter__seal-choose
+                                        button.filter__seal-choose-btn.triangle-down(type="button" data-default="Выберите тип") Выберите тип
+                                        .nav__choose-box.filter__seal-choose-block
+                                            .filter__item.radio
+                                                input(type="radio" name="oil_seals_type" id="oil-seals-type-1" value="Тип 1")
+                                                label(for="oil-seals-type-1") Тип 1
+                                            .filter__item.radio
+                                                input(type="radio" name="oil_seals_type" id="oil-seals-type-2" value="Тип 2")
+                                                label(for="oil-seals-type-2") Тип 2
+                                            .filter__item.radio
+                                                input(type="radio" name="oil_seals_type" id="oil-seals-type-3" value="Тип 3")
+                                                label(for="oil-seals-type-3") Тип 3
+                                            .filter__item.radio
+                                                input(type="radio" name="oil_seals_type" id="oil-seals-type-4" value="Тип 4")
+                                                label(for="oil-seals-type-4") Тип 4
+
+                                .filter__seal._btn
+                                    button.filter__seal-btn(type="submit") Найти
+
+            .section._grey
+                .container.intro__cols
+                    .intro__col._small._products
+                    .intro__col._big._products
+                        .sorting
+                            .sorting__col._big
+                                .sorting__row
+                                    .sorting__title Сортировать:
+                                    //Класс _active для активного элемента
+                                    a.sorting__item._active(href="#") По умолчанию
+                                    a.sorting__item(href="#") По ценe
+                                        //Класс _asc для обратного порядка
+                                        span.sorting__price._desc
+                                            span
+                                            span
+                                            span
+                                    a.sorting__item(href="#") По наличию
+                                    a.sorting__item(href="#") По артикулу
+                                    a.sorting__item(href="#") По типу
+                                    a.sorting__item(href="#") По размеру
+
+                            .sorting__col.template._small
+                                button.template__item.template__row._active(type="button" data-src=".category__list")
+                                    span
+                                    span
+                                button.template__item.template__table(type="button" data-src=".category__table")
+                                    span
+                                    span
+                                    span
+                                    span
+
+                            .sorting__mobile
+                                button.sorting__mobile-btn.show-panel(type="button" data-src=".mobile-sorting-oil-seals") Сортировать
+
+                        .category__list.category__template._oil-seal._active
+                            .product._list._oil-seal
+                                .product__col._image
+                                    .product__top
+                                        .product__labels
+                                            .product__label._blue Новинка
+                                        button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                            svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                use(xlink:href="#svg-3d")
+
+                                    .product__carousel
+                                        .product__carousel-init
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+
+                                        .product__dots.dots._black
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+
+                                .product__col._content
+
+                                    a.product__title(href="#") SL-00009
+
+                                    .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                .product__col._controls
+                                    form.product__controls(action="#" method="post")
+                                        .product__price 20 046 ₽
+                                        .product__count
+                                            button._minus(type="button") -
+                                            input(type="text" name="count" value="1" readonly)
+                                            button._plus(type="button") +
+                                        button.product__cart(type="submit" disabled) В корзину
+
+                                    button.product__alert(type="button")
+                                        svg(width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                            use(xlink:href="#svg-alert")
+                                        | Уведомить о поступлении
+
+                                    .product__stocks
+                                        // Класс _false для не в наличии
+                                        .product__stocks-status._false нет в наличии
+
+                            .product._list._oil-seal
+                                .product__col._image
+                                    .product__top
+                                        .product__labels
+                                            .product__label._blue Новинка
+                                        button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                            svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                use(xlink:href="#svg-3d")
+
+                                    .product__carousel
+                                        .product__carousel-init
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+
+                                        .product__dots.dots._black
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+
+                                .product__col._content
+
+                                    a.product__title(href="#") SL-00009
+
+                                    .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                .product__col._controls
+                                    form.product__controls(action="#" method="post")
+                                        .product__price 20 046 ₽
+                                        .product__count
+                                            button._minus(type="button") -
+                                            input(type="text" name="count" value="1" readonly)
+                                            button._plus(type="button") +
+                                        button.product__cart(type="submit") В корзину
+
+                                    .product__stocks
+                                        // Класс _false для не в наличии
+                                        .product__stocks-status._true в наличии 23 шт.
+                                        .product__stocks-cities._mobile
+                                            span Владимир
+                                            span Москва
+                                            span Нижний Новгород
+                                            span Краснодар
+                            .product._list._oil-seal
+                                .product__col._image
+                                    .product__top
+                                        .product__labels
+                                            .product__label._blue Новинка
+                                        button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                            svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                use(xlink:href="#svg-3d")
+
+                                    .product__carousel
+                                        .product__carousel-init
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+
+                                        .product__dots.dots._black
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+
+                                .product__col._content
+
+                                    a.product__title(href="#") SL-00009
+
+                                    .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                .product__col._controls
+                                    form.product__controls(action="#" method="post")
+                                        .product__price 20 046 ₽
+                                        .product__count
+                                            button._minus(type="button") -
+                                            input(type="text" name="count" value="1" readonly)
+                                            button._plus(type="button") +
+                                        button.product__cart(type="submit" disabled) В корзину
+
+                                    button.product__alert(type="button")
+                                        svg(width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                            use(xlink:href="#svg-alert")
+                                        | Уведомить о поступлении
+
+                                    .product__stocks
+                                        // Класс _false для не в наличии
+                                        .product__stocks-status._false нет в наличии
+
+                            .product._list._oil-seal
+                                .product__col._image
+                                    .product__top
+                                        .product__labels
+                                            .product__label._blue Новинка
+                                        button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                            svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                use(xlink:href="#svg-3d")
+
+                                    .product__carousel
+                                        .product__carousel-init
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+
+                                        .product__dots.dots._black
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+
+                                .product__col._content
+
+                                    a.product__title(href="#") SL-00009
+
+                                    .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                .product__col._controls
+                                    form.product__controls(action="#" method="post")
+                                        .product__price 20 046 ₽
+                                        .product__count
+                                            button._minus(type="button") -
+                                            input(type="text" name="count" value="1" readonly)
+                                            button._plus(type="button") +
+                                        button.product__cart(type="submit") В корзину
+
+                                    .product__stocks
+                                        // Класс _false для не в наличии
+                                        .product__stocks-status._true в наличии 23 шт.
+                                        .product__stocks-cities._mobile
+                                            span Владимир
+                                            span Москва
+                                            span Нижний Новгород
+                                            span Краснодар
+                            .product._list._oil-seal
+                                .product__col._image
+                                    .product__top
+                                        .product__labels
+                                            .product__label._blue Новинка
+                                        button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                            svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                use(xlink:href="#svg-3d")
+
+                                    .product__carousel
+                                        .product__carousel-init
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/oil-seal-img.jpg" alt="" width="240" height="240")
+
+                                        .product__dots.dots._black
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+
+                                .product__col._content
+
+                                    a.product__title(href="#") SL-00009
+
+                                    .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                .product__col._controls
+                                    form.product__controls(action="#" method="post")
+                                        .product__price 20 046 ₽
+                                        .product__count
+                                            button._minus(type="button") -
+                                            input(type="text" name="count" value="1" readonly)
+                                            button._plus(type="button") +
+                                        button.product__cart(type="submit" disabled) В корзину
+
+                                    button.product__alert(type="button")
+                                        svg(width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                            use(xlink:href="#svg-alert")
+                                        | Уведомить о поступлении
+
+                                    .product__stocks
+                                        // Класс _false для не в наличии
+                                        .product__stocks-status._false нет в наличии
+
+                            .product._list._oil-seal
+                                .product__col._image
+                                    .product__top
+                                        .product__labels
+                                            .product__label._blue Новинка
+                                        button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                            svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                use(xlink:href="#svg-3d")
+
+                                    .product__carousel
+                                        .product__carousel-init
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+                                            .product__carousel-item
+                                                a.product__img(href="#")
+                                                    picture
+                                                        source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                        source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                        img(src="img/tmp/product.jpg" alt="" width="240" height="240")
+
+                                        .product__dots.dots._black
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+                                            button.dots__item(type="button")
+
+                                .product__col._content
+
+                                    a.product__title(href="#") SL-00009
+
+                                    .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                .product__col._controls
+                                    form.product__controls(action="#" method="post")
+                                        .product__price 20 046 ₽
+                                        .product__count
+                                            button._minus(type="button") -
+                                            input(type="text" name="count" value="1" readonly)
+                                            button._plus(type="button") +
+                                        button.product__cart(type="submit") В корзину
+
+                                    .product__stocks
+                                        // Класс _false для не в наличии
+                                        .product__stocks-status._true в наличии 23 шт.
+                                        .product__stocks-cities._mobile
+                                            span Владимир
+                                            span Москва
+                                            span Нижний Новгород
+                                            span Краснодар
+
+                        .category__table.category__template
+                            .category__product._small._oil-seal
+                                .product
+                                    .product__virtual-col
+                                        .product__top
+                                            .product__labels
+                                                .product__label._blue Новинка
+                                            button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                                svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-3d")
+
+                                        .product__carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+
+                                            .product__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                        a.product__title(href="#") SL-00009
+
+                                        .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                    .product__virtual-col
+                                        form.product__controls(action="#" method="post")
+                                            .product__price 20 046 ₽
+                                            .product__count
+                                                button._minus(type="button") -
+                                                input(type="text" name="count" value="1" readonly)
+                                                button._plus(type="button") +
+                                            button.product__cart(type="submit") В корзину
+
+                                        .product__stocks
+                                            // Класс _false для не в наличии
+                                            .product__stocks-status._true в наличии
+                                            .product__stocks-cities
+                                                span Владимир
+                                                span Москва
+                                                span Нижний Новгород
+                                                span Краснодар
+
+                            .category__product._small._oil-seal
+                                .product
+                                    .product__virtual-col
+                                        .product__top
+                                            .product__labels
+                                                .product__label._blue Новинка
+                                            button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                                svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-3d")
+
+                                        .product__carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+
+                                            .product__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                        a.product__title(href="#") SL-00009
+
+                                        .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                    .product__virtual-col
+                                        form.product__controls(action="#" method="post")
+                                            .product__price 20 046 ₽
+                                            .product__count
+                                                button._minus(type="button") -
+                                                input(type="text" name="count" value="1" readonly)
+                                                button._plus(type="button") +
+                                            button.product__cart(type="submit") В корзину
+
+                                        .product__stocks
+                                            // Класс _false для не в наличии
+                                            .product__stocks-status._true в наличии
+                                            .product__stocks-cities
+                                                span Владимир
+                                                span Москва
+                                                span Нижний Новгород
+                                                span Краснодар
+
+                            .category__product._small._oil-seal
+                                .product
+                                    .product__virtual-col
+                                        .product__top
+                                            .product__labels
+                                                .product__label._blue Новинка
+                                            button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                                svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-3d")
+
+                                        .product__carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+
+                                            .product__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                        a.product__title(href="#") SL-00009
+
+                                        .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                    .product__virtual-col
+                                        form.product__controls(action="#" method="post")
+                                            .product__price 20 046 ₽
+                                            .product__count
+                                                button._minus(type="button") -
+                                                input(type="text" name="count" value="1" readonly)
+                                                button._plus(type="button") +
+                                            button.product__cart(type="submit") В корзину
+
+                                        .product__stocks
+                                            // Класс _false для не в наличии
+                                            .product__stocks-status._true в наличии
+                                            .product__stocks-cities
+                                                span Владимир
+                                                span Москва
+                                                span Нижний Новгород
+                                                span Краснодар
+
+                            .category__product._small._oil-seal
+                                .product
+                                    .product__virtual-col
+                                        .product__top
+                                            .product__labels
+                                                .product__label._blue Новинка
+                                            button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                                svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-3d")
+
+                                        .product__carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+
+                                            .product__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                        a.product__title(href="#") SL-00009
+
+                                        .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                    .product__virtual-col
+                                        form.product__controls(action="#" method="post")
+                                            .product__price 20 046 ₽
+                                            .product__count
+                                                button._minus(type="button") -
+                                                input(type="text" name="count" value="1" readonly)
+                                                button._plus(type="button") +
+                                            button.product__cart(type="submit") В корзину
+
+                                        .product__stocks
+                                            // Класс _false для не в наличии
+                                            .product__stocks-status._true в наличии
+                                            .product__stocks-cities
+                                                span Владимир
+                                                span Москва
+                                                span Нижний Новгород
+                                                span Краснодар
+
+                            .category__product._small._oil-seal
+                                .product
+                                    .product__virtual-col
+                                        .product__top
+                                            .product__labels
+                                                .product__label._blue Новинка
+                                            button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                                svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-3d")
+
+                                        .product__carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+
+                                            .product__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                        a.product__title(href="#") SL-00009
+
+                                        .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                    .product__virtual-col
+                                        form.product__controls(action="#" method="post")
+                                            .product__price 20 046 ₽
+                                            .product__count
+                                                button._minus(type="button") -
+                                                input(type="text" name="count" value="1" readonly)
+                                                button._plus(type="button") +
+                                            button.product__cart(type="submit") В корзину
+
+                                        .product__stocks
+                                            // Класс _false для не в наличии
+                                            .product__stocks-status._true в наличии
+                                            .product__stocks-cities
+                                                span Владимир
+                                                span Москва
+                                                span Нижний Новгород
+                                                span Краснодар
+
+                            .category__product._small._oil-seal
+                                .product
+                                    .product__virtual-col
+                                        .product__top
+                                            .product__labels
+                                                .product__label._blue Новинка
+                                            button.product__3d(type="button" data-src="#modal-3d" data-fancybox)
+                                                svg(width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                    use(xlink:href="#svg-3d")
+
+                                        .product__carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/oil-seal-img@2x.webp 2x, img/tmp/oil-seal-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/oil-seal-img@2x.jpg 2x, img/tmp/oil-seal-img.jpg 1x")
+                                                            img(src="img/tmp/oil-seal-img.jpg" alt="" width="307" height="307")
+
+                                            .product__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                        a.product__title(href="#") SL-00009
+
+                                        .product__text d - диаметр вала * D - наружный * H - высота (тип): 25*35*6.9/7(1PM)
+
+                                    .product__virtual-col
+                                        form.product__controls(action="#" method="post")
+                                            .product__price 20 046 ₽
+                                            .product__count
+                                                button._minus(type="button") -
+                                                input(type="text" name="count" value="1" readonly)
+                                                button._plus(type="button") +
+                                            button.product__cart(type="submit") В корзину
+
+                                        .product__stocks
+                                            // Класс _false для не в наличии
+                                            .product__stocks-status._true в наличии
+                                            .product__stocks-cities
+                                                span Владимир
+                                                span Москва
+                                                span Нижний Новгород
+                                                span Краснодар
+
+                        .more
+                            button.more__button
+                                svg(width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    use(xlink:href="#svg-more")
+                                | Показать еще
+
+
+        include includes/_footer.pug
+
+        include includes/_panel.pug
+
+        include includes/_svg.pug
+
+        include includes/_modals.pug
+
+        include includes/_scripts.pug

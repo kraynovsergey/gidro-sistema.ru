@@ -1,0 +1,172 @@
+.header {
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	top: 0;
+	background: $color_white;
+
+	@media (max-width: 991px) {
+		position: relative;
+	}
+
+	&._scroll {
+		@media (min-width: 992px) {
+			& .nav {
+				height: 40px;
+			}
+
+			& .header__content {
+				@media (min-width: 992px) {
+					height: 70px;
+				}
+			}
+
+			& .header__logo {
+				& svg {
+					@media (min-width: 992px) {
+						height: 45px;
+						width: auto;
+					}
+				}
+			}
+
+			& .search {
+				height: 40px;
+
+				@media (max-width: 991px) {
+					height: 48px;
+				}
+			}
+
+			& .top {
+				display: none;
+			}
+
+			& .header__phone-scroll {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 120px;
+		transition: .5s ease;
+
+		@media (max-width: 991px) {
+			height: auto;
+			padding-top: 10px;
+		}
+	}
+
+	&__cols {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__logo {
+		@media (max-width: 991px) {
+			& svg {
+				height: 40px;
+				width: auto;
+			}
+		}
+	}
+
+	&__controls {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 991px) {
+			display: none;
+		}
+
+		&-mobile {
+			display: none;
+
+			@media (max-width: 991px) {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	&__control {
+		display: flex;
+		align-items: center;
+		margin-right: 30px;
+		font-size: .77rem;
+
+		&:last-child {
+			margin-right: 0;
+
+			& svg {
+				& use {
+					fill: transparent;
+					stroke: $color_red;
+				}
+			}
+		}
+
+		&:hover {
+			color: $color_red;
+		}
+
+		& svg {
+			margin-right: 10px;
+
+			& use {
+				fill: $color_red;
+			}
+		}
+	}
+
+	&__search {
+		flex-grow: 1;
+		padding: 0 40px;
+
+		@media (max-width: 991px) {
+			order: 3;
+			width: 100%;
+			padding: 10px 0 0;
+		}
+	}
+
+	&__phone {
+		font-size: .85rem;
+		color: inherit;
+		text-decoration: none;
+		font-weight: bold;
+		margin-right: 12px;
+	}
+
+	&__auth {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #D2D2D2;
+		border-radius: 5px;
+	}
+
+	&__phone-scroll {
+		margin-right: 25px;
+		display: none;
+	}
+}
+
+body.compensate-for-scrollbar {
+	& .header {
+		@media (min-width: 992px) {
+			width: calc(100% - 15px);
+		}
+	}
+}

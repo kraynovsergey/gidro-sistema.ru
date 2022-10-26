@@ -1,0 +1,94 @@
+.button-checkbox {
+
+	& input {
+		display: none;
+
+		&:checked {
+			& + label {
+				border: 1px solid $color_red;
+
+				& .button-checkbox__circle {
+					background: $color_red;
+					border-color: $color_red;
+
+					&::before {
+						border-color: $color_white;
+					}
+				}
+			}
+		}
+	}
+
+	&__label {
+		padding: 0 30px;
+		height: 106px;
+		background: $color_white;
+		border: 1px solid $color_white;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		cursor: pointer;
+		transition: .5s ease;
+		font-size: 1.33rem;
+
+		@media (max-width: 1199px) {
+			font-size: 1rem;
+		}
+
+		@media (max-width: 991px) {
+			font-size: 1.2rem;
+			height: 90px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 1.28rem;
+		}
+
+		& svg {
+			fill: $color_black;
+			margin-right: 30px;
+			font-size: 1.33rem;
+
+			@media (max-width: 991px) {
+				width: 30px;
+				height: auto;
+			}
+
+			&._stroke {
+				stroke: $color_black;
+			}
+		}
+	}
+
+	&__content {
+		flex-grow: 1;
+		padding-right: 15px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__circle {
+		min-width: 30px;
+		max-width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px solid $color_grey_border;
+		background: $color_grey;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: .5s ease;
+
+		&::before {
+			content: '';
+			width: 12px;
+			height: 6px;
+			border-left: 2px solid transparent;
+			border-bottom: 2px solid transparent;
+			transform: rotate(-45deg);
+			position: relative;
+			top: -1px;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.top {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 60px;
+	border-bottom: 1px solid #D7D7D7;
+	transition: .5s ease;
+
+	@media (max-width: 991px) {
+		display: none;
+	}
+
+	&__cols {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__col {
+		display: flex;
+		align-items: center;
+	}
+
+	&__address {
+		margin-right: 30px;
+	}
+
+	&__choose {
+		font-size: .77rem;
+		color: $color_grey_font;
+		border-color: $color_grey_font;
+
+		&:hover {
+			color: $color_red;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

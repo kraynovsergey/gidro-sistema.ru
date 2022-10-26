@@ -1,0 +1,148 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Заказы', description: 'Описание заказов', keywords: 'Ключи заказов'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            .container
+                include includes/_breadcrumbs-small
+
+            section.profile
+                .container
+                    .profile__top
+                        h1.profile__h1.category__h1 Заказы
+
+                .section.order._grey
+                    .container
+                        .order__item
+                            .order__products
+                                .order__product
+                                    .order__product-col._small
+                                        .product__carousel.order__product-carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+
+                                            .product__dots.order__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                    .order__product-col._big
+                                        a.order__product-title(href="#") 2GS4454 Lancia Biturbo 1988-1994
+
+                                .order__product
+                                    .order__product-col._small
+                                        .product__carousel.order__product-carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+
+                                            .product__dots.order__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                    .order__product-col._big
+                                        a.order__product-title(href="#") 2GS4454 Lancia Biturbo 1988-1994
+
+                            .order__info
+                                .order__info-col
+                                    .order__title Заказ Y2048618
+                                        .order__date 20 сентября 2022
+                                    .order__address.order__small <span>Адрес</span> г. Владимир, ул. Поселковая 1
+                                .order__info-col.order__count.order__small 2 товара
+                                .order__info-col
+                                    .order__price 20 046 ₽
+                                    .order__status._green Оплачен
+
+                        .order__item
+                            .order__products
+                                .order__product
+                                    .order__product-col._small
+                                        .product__carousel.order__product-carousel
+                                            .product__carousel-init
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+                                                .product__carousel-item
+                                                    a.product__img(href="#")
+                                                        picture
+                                                            source(type="image/webp" srcset="img/tmp/cart-img@2x.webp 2x, img/tmp/cart-img.webp 1x")
+                                                            source(type="image/jpeg" srcset="img/tmp/cart-img@2x.jpg 2x, img/tmp/cart-img.jpg 1x")
+                                                            img(src="img/tmp/cart-img.jpg" alt="" width="240" height="134")
+
+                                            .product__dots.order__dots.dots._black
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+                                                button.dots__item(type="button")
+
+                                    .order__product-col._big
+                                        a.order__product-title(href="#") 2GS4454 Lancia Biturbo 1988-1994
+
+                            .order__info
+                                .order__info-col
+                                    .order__title Заказ Y2048618
+                                        .order__date 20 сентября 2022
+                                    .order__address.order__small <span>Адрес</span> г. Владимир, ул. Поселковая 1
+                                .order__info-col.order__count.order__small 2 товара
+                                .order__info-col
+                                    .order__price 20 046 ₽
+                                    .order__status._blue Завершен
+
+
+
+
+        include includes/_footer.pug
+
+        include includes/_panel.pug
+
+        include includes/_svg.pug
+
+        include includes/_modals.pug
+
+        include includes/_scripts.pug

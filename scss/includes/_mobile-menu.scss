@@ -1,0 +1,98 @@
+.mobile-menu {
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__control {
+		width: calc(50% - 7.5px);
+		background: $color_grey;
+		display: flex;
+		align-items: center;
+		height: 54px;
+		padding: 0 15px;
+		color: inherit;
+		text-decoration: none;
+		border-radius: 5px;
+
+		&:last-child {
+			& svg {
+				& use {
+					fill: transparent;
+					stroke: $color_red;
+				}
+			}
+		}
+
+		& svg {
+			margin-right: 10px;
+
+			& use {
+				fill: $color_red;
+			}
+		}
+	}
+
+	&__list {
+		padding: 25px 0;
+		margin: 0;
+		list-style: none;
+
+		& li {
+			margin-bottom: 25px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&._active {
+				color: $color_red;
+			}
+
+			& a {
+				color: inherit;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+		}
+	}
+
+	&__footer {
+		margin: 0 -20px;
+		background: $color_grey;
+		padding: 25px 20px 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__choose {
+		border-bottom: 1px solid $color_grey_border;
+		padding-bottom: 15px;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		margin-bottom: 25px;
+		width: 100%;
+
+		&-btn {
+			font-weight: 500;
+			margin-bottom: 5px;
+			color: $color_grey_font;
+		}
+	}
+
+	&__address {
+		font-size: 1.28rem;
+	}
+
+	&__email {
+		color: inherit;
+		margin-bottom: 25px;
+		text-decoration: none;
+		font-size: 1.28rem;
+	}
+}

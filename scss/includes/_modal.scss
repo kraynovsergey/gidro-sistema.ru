@@ -1,0 +1,73 @@
+.modal {
+	display: none;
+	max-width: 600px;
+	width: 100%;
+	padding: 50px;
+	background: $color_white;
+	border-radius: 10px;
+	position: relative;
+	color: $color_black;
+	font-size: 14px;
+
+	@media (max-width: 991px) {
+		padding: 30px;
+	}
+
+	&._small {
+		max-width: 396px;
+		padding: 30px;
+
+		& .modal__title {
+			font-size: 1.33rem;
+			font-weight: 400;
+
+			@media (max-width: 991px) {
+				font-size: 1.7rem;
+			}
+		}
+
+		& .modal__close {
+			right: 30px;
+			top: 30px;
+		}
+	}
+
+	& .is-close {
+		display: none;
+	}
+
+	&__close {
+		right: 50px;
+		top: 50px;
+		position: absolute;
+
+		@media (max-width: 991px) {
+			right: 30px;
+			top: 30px;
+		}
+
+		&:hover {
+			& svg use {
+				fill: $color_red;
+			}
+		}
+
+		& svg {
+			& use {
+				transition: .5s ease;
+				fill: $color_grey_font;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2rem;
+		margin-bottom: 25px;
+		line-height: 110%;
+		font-weight: 300;
+
+		@media (max-width: 991px) {
+			font-size: 1.7rem;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.template {
+	display: flex;
+	align-items: center;
+
+	&__item {
+		width: 15px;
+		height: 15px;
+		margin-right: 20px;
+		display: flex;
+		flex-wrap: wrap;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		& span {
+			background: $color_grey_border;
+			height: 6px;
+			border-radius: 2px;
+		}
+
+		&._active {
+			& span {
+				background: $color_black;
+			}
+		}
+	}
+
+	&__row {
+		flex-direction: column;
+		justify-content: space-between;
+
+		& span {
+			width: 100%;
+		}
+	}
+
+	&__table {
+		justify-content: space-between;
+
+		& span {
+			width: 6px;
+
+			&:first-child {
+				margin-bottom: 3px;
+			}
+		}
+	}
+}

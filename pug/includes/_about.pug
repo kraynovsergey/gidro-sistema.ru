@@ -1,0 +1,21 @@
+section.section.about
+    .container
+        .section__cols
+            .section__col.about__content
+                .section__title
+                    h2.section__h2 О компании
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .about__hidden
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                button.about__more(type="button" data-show="Подробнее" data-hide="Скрыть")
+                    svg._active(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-plus")
+                    svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-close")
+                    | <span>Подробнее</span>
+
+            .section__col
+                picture
+                    source(type="image/webp" srcset="img/tmp/about@2x.webp 2x, img/tmp/about.webp 1x")
+                    source(type="image/jpeg" srcset="img/tmp/about@2x.jpg 2x, img/tmp/about.jpg 1x")
+                    img.about__img(src="img/tmp/about.jpg" alt="" width="653" height="424")

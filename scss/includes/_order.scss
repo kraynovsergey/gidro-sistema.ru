@@ -1,0 +1,264 @@
+.order {
+	&__item {
+		margin-bottom: 15px;
+		cursor: pointer;
+		display: flex;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&._active {
+			@media (max-width: 991px) {
+				flex-direction: column;
+			}
+
+			& .order__products {
+				display: flex;
+			}
+
+			@media (min-width: 992px) {
+				& .order__info {
+					min-width: 260px;
+					max-width: 260px;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+
+					&-col {
+						padding: 0 !important;
+						margin-bottom: 10px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				& .order__title {
+					flex-direction: column;
+					align-items: flex-start;
+					margin-bottom: 10px;
+				}
+
+				& .order__date {
+					margin-left: 0;
+					margin-top: 8px;
+				}
+
+				& .order__address {
+					& span {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	&__info {
+		width: 100%;
+		display: flex;
+		padding: 15px 30px;
+		background: $color_white;
+		border-radius: 5px;
+		align-items: center;
+		justify-content: space-between;
+		transition: .5s ease;
+
+		@media (max-width: 991px) {
+			padding: 30px 20px;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&-col {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			&:nth-child(2) {
+				padding: 0 30px;
+
+				@media (max-width: 991px) {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&__products {
+		display: none;
+		flex-direction: column;
+		flex-grow: 1;
+		margin-right: 5px;
+
+		@media (max-width: 991px) {
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__title {
+		font-size: 1.11rem;
+		display: flex;
+		align-items: center;
+		//margin-bottom: 10px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 10px;
+			font-size: 1.33rem;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__date {
+		color: $color_grey_font;
+		margin-left: 5px;
+
+		@media (max-width: 991px) {
+			margin-left: 0;
+		}
+	}
+
+	&__small {
+		font-size: .77rem;
+		font-weight: 500;
+		color: $color_grey_font;
+
+		@media (max-width: 991px) {
+			font-size: .93rem;
+		}
+	}
+
+	&__address {
+		@media (max-width: 991px) {
+			margin-bottom: 10px;
+		}
+
+		& span {
+			color: $color_black;
+
+			@media (max-width: 991px) {
+				display: block;
+			}
+		}
+	}
+
+	&__price {
+		font-size: 1.2rem;
+		font-weight: 500;
+
+		@media (max-width: 991px) {
+			font-size: 2.13rem;
+		}
+	}
+
+	&__status {
+		height: 34px;
+		border-radius: 5px;
+		color: $color_white;
+		font-size: .77rem;
+		padding: 0 14px;
+		line-height: 34px;
+
+		@media (max-width: 991px) {
+			font-size: .93rem;
+		}
+
+		&._blue {
+			background: $color_blue;
+		}
+
+		&._green {
+			background: $color_green;
+		}
+	}
+
+	&__product {
+		margin-bottom: 5px;
+		display: flex;
+		height: 100%;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-col {
+			position: relative;
+			background: $color_white;
+			border-radius: 5px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			min-height: 164px;
+
+			@media (max-width: 991px) {
+				//min-height: 200px;
+			}
+
+			@media (max-width: 767px) {
+				min-height: auto;
+			}
+
+			&._big {
+				padding: 15px 30px;
+				flex-grow: 1;
+
+				@media (max-width: 991px) {
+					padding: 30px 20px;
+				}
+			}
+
+			&._small {
+				padding: 15px;
+				min-width: 270px;
+				max-width: 270px;
+				margin-right: 5px;
+
+				@media (max-width: 767px) {
+					padding: 7px 0;
+					margin-bottom: 5px;
+					min-width: 100%;
+					max-width: 100%;
+					margin-right: 0;
+				}
+			}
+		}
+
+		&-carousel {
+			margin-bottom: 0;
+		}
+
+		&-title {
+			font-size: 1.33rem;
+			color: $color_blue;
+			text-decoration: underline;
+			font-weight: 500;
+
+			@media (max-width: 991px) {
+				font-size: 1.2rem;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__dots {
+		display: none;
+		position: absolute;
+		bottom: 15px;
+		z-index: 5;
+
+		@media (max-width: 767px) {
+			left: 15px;
+		}
+	}
+}
